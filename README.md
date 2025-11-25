@@ -17,7 +17,6 @@ flask-template/
 ├── app.py                 # Aplicación principal Flask
 ├── requirements.txt       # Dependencias de Python
 ├── Dockerfile            # Configuración de Docker
-├── docker-compose.yml    # Configuración de Docker Compose
 ├── templates/            # Plantillas HTML
 │   ├── base.html
 │   ├── index.html
@@ -30,26 +29,9 @@ flask-template/
 
 ## Requisitos Previos
 
-- Docker y Docker Compose instalados
-- O Python 3.11+ si quieres ejecutar sin Docker
+- Docker instalado
 
 ## Instalación y Ejecución
-
-### Opción 1: Usando Docker Compose (Recomendado)
-
-1. Construir y ejecutar el contenedor:
-```bash
-docker-compose up --build
-```
-
-2. La aplicación estará disponible en: http://localhost:5000
-
-3. Para detener la aplicación:
-```bash
-docker-compose down
-```
-
-### Opción 2: Usando Docker directamente
 
 1. Construir la imagen:
 ```bash
@@ -58,7 +40,7 @@ docker build -t flask-app .
 
 2. Ejecutar el contenedor:
 ```bash
-docker run -p 5000:5000 flask-app
+docker run -p 5000:80 flask-app
 ```
 
 3. La aplicación estará disponible en: http://localhost:5000
@@ -70,13 +52,4 @@ docker run -p 5000:5000 flask-app
 - `/about` - Página acerca de
 - `/contact` - Página de contacto
 
-## Desarrollo
-
-Para desarrollo con recarga automática, puedes usar:
-
-El volumen está montado, por lo que los cambios en el código se reflejarán automáticamente.
-
-## Notas
-
-- El puerto por defecto es 5000
 
