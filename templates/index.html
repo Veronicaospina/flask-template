@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Flask App{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Bienvenido a Flask App</h1>
+    <p>Una aplicación Flask con plantillas HTML y Docker</p>
+    <a href="{{ url_for('about') }}" class="btn">Conoce más</a>
+</div>
+
+<div class="features">
+    <div class="feature-card">
+        <h2>🚀 Rápido</h2>
+        <p>Desarrollado con Flask para un rendimiento óptimo</p>
+    </div>
+    <div class="feature-card">
+        <h2>🐳 Dockerizado</h2>
+        <p>Fácil de desplegar con contenedores Docker</p>
+    </div>
+    <div class="feature-card">
+        <h2>📱 Responsive</h2>
+        <p>Diseño adaptable a todos los dispositivos</p>
+    </div>
+</div>
+{% endblock %}
+
